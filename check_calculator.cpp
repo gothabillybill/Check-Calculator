@@ -28,11 +28,11 @@ public:
     void input(istream& ins); // file input
     void output(ostream& outs) const; // file output
     void update();
-// getters
+
     int get_check_num();
     long get_check_amount();
     bool get_cashed_bool();
-// 
+
     void compute_bank_balance();
     void check_list();
 
@@ -158,7 +158,7 @@ bool operator ==(const Money& amount1, const Money& amount2){
 }
 Money::Money(long dollars, int cents){
     if(dollars*cents < 0){
-        cout<<"Illegal values for dollas and cents.\n";
+        cout<<"Illegal values for dollars and cents.\n";
         exit(1);
     }
     all_cents = dollars*100 + cents;
